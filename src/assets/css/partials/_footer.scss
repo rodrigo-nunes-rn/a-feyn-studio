@@ -21,4 +21,9 @@ footer {
     font-weight: 700;
     color: $background-color;
   }
+
+  @media #{$xlarge} {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
 }

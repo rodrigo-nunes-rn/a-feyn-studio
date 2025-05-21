@@ -26,4 +26,51 @@ body {
   ul {
     list-style-type: none;
   }
+
+  h1, h2 {
+    font-family: $serif-font;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  h1 {
+    font-size: 5.57em;
+    filter: blur(2px);
+
+    @media #{$medium} {
+      font-size: 8em;
+    }
+
+    @media #{$xlarge} {
+      font-size: 12em;
+    }
+  }
+
+  h2 {
+    font-size: 3.14em;
+  }
+
+  h3 {
+    color: $secondary-color-1;
+    font-size: 1.28em;
+    letter-spacing: 2px;
+  }
+
+  a {
+    color: $primary-color;
+
+    &:hover {
+      color: $secondary-color-2;
+      transition: 0.3s;
+    }
+
+    &:active {
+      color: $secondary-color-1;
+      transition: 0.1s;
+    }
+  }
+
+  strong {
+    font-weight: 900;
+  }
 }

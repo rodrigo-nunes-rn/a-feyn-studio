@@ -1,0 +1,392 @@
+#hero {
+    display: flex;             
+    flex-direction: column;    
+    justify-content: center;    
+    align-items: center;        
+    height: 92vh;             
+    text-align: center;       
+    margin: 0;              
+    font-family: $serif-font;
+
+    .hero-content {
+        margin-right: 48px;
+       }
+    
+       .hero-content__we-are {
+        display: flex;
+        gap: 16px;
+        letter-spacing: 4px;
+        text-align: right;
+       }
+    
+       .hero-figure {
+        width: 100px;
+       }
+    
+       .hero-content__studio {
+        text-align: left;
+        margin-top: 1em;
+        margin-left: 80%;
+        letter-spacing: 8px;
+        color: $secondary-color-2;
+       }
+
+        /* ==================== 2.1 HERO "GIF" ANIMATION ==================== */
+
+       .hero__image-container {
+        background-image: url('../assets/hero/hero_01.jpg'); 
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 150px;
+        animation: hero-images 5s steps(1, start) infinite;
+        margin: 0 auto;
+      }
+  
+      @keyframes hero-images {
+        0% {
+          background-image: url('/assets/img/hero/hero_01.jpg');
+        }
+        7.14% {
+          background-image: url('/assets/img/hero/hero_02.jpg');
+        }
+        14.28% {
+          background-image: url('/assets/img/hero/hero_03.jpg');
+        }
+        21.42% {
+          background-image: url('/assets/img/hero/hero_04.jpg');
+        }
+        28.56% {
+          background-image: url('/assets/img/hero/hero_05.jpg');
+        }
+        35.7% {
+          background-image: url('/assets/img/hero/hero_06.jpg');
+        }
+        42.84% {
+          background-image: url('/assets/img/hero/hero_07.jpgg');
+        }
+        50% {
+          background-image: url('/assets/img/hero/hero_08.jpg');
+        }
+        57.14% {
+          background-image: url('/assets/img/hero/hero_09.jpg');
+        }
+        64.28% {
+          background-image: url('/assets/img/hero/hero_10.jpg');
+        }
+        71.42% {
+          background-image: url('/assets/img/hero/hero_11.jpg');
+        }
+        78.56% {
+          background-image: url('/assets/img/hero/hero_12.jpg');
+        }
+        85.7% {
+          background-image: url('/assets/img/hero/hero_13.jpg');
+        }
+        92.84% {
+          background-image: url('/assets/img/hero/hero_14.jpg');
+        }
+        100% {
+          background-image: url('/assets/img/hero/hero_01.jpg'); 
+        }
+      }
+  
+    /* ==================== 2.2 FEYN ANIMATION ==================== */
+  
+    .hero-studio__feyn {
+      position: relative;
+    }
+  
+    .hero-studio__feyn::after {
+      content: "feyn";
+      color: $secondary-color-2;
+      font-weight: bold;
+      animation: changeWords 5s steps(1, start) infinite;
+    }
+  
+  
+    @keyframes changeWords {
+      0%, 14.29% {
+        content: "feyn";
+        color: $secondary-color-1;
+      }
+      14.29%, 28.57% {
+        content: "dynamic";
+        color: $secondary-color-2;
+      }
+      28.57%, 42.86% {
+        content: "curious";
+        color: $secondary-color-2;
+      }
+      42.86%, 57.14% {
+        content: "creative";
+        color: $secondary-color-2;
+      }
+      57.14%, 71.43% {
+        content: "quirky";
+        color: $secondary-color-2;
+      }
+      71.43%, 85.71% {
+        content: "conscious";
+        color: $secondary-color-2;
+      }
+      85.71%, 100% {
+        content: "feyn";
+        color: $secondary-color-1;
+      }
+    }
+
+    @media #{$xlarge} {
+        .hero-content__we-are {
+        display: flex;
+        gap: 16px;
+        letter-spacing: 4px;
+        text-align: right;
+      }
+
+      .hero-figure {
+        width: 186px;
+      }
+
+      .hero__image-container {
+        width: 186px;
+        height: 250px;
+      }
+    }
+   }
+/* ====================
+3. WHY SECTION
+==================== */
+
+   /* ==================== 3.1 INTRODUCTION ==================== */
+
+
+.why {
+    &__introduction {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto 64px auto;
+        max-width: 900px;
+
+        h1 {
+            margin-top: 8px;
+        }
+
+        @media #{$medium} {
+            margin: 0 auto 128px auto;  
+
+            blockquote {
+                font-size: 1.4em;
+            }       
+          }
+
+        @media #{$large} {
+            blockquote {
+                font-size: 1.5em;
+            }       
+          }
+
+          @media #{$xlarge} {
+            margin: 0 auto 200px auto;        
+          }
+    }
+
+    &__quote {
+        @media #{$medium} {
+            padding: 0 48px;
+        }
+    }  
+
+    &__feynman {
+        text-align: right;
+        margin-top: 24px;
+    }
+
+    &__about {
+        margin: 64px auto;
+        text-align: left;
+        max-width: 400px;
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 0.4em;
+        }
+
+        p {
+            margin-bottom: 0.6em;
+        }
+    }
+}
+
+.value-proposition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto 128px auto;
+
+    &__figure {
+        margin: 24px 0px;
+        max-width: 400px;
+        width: 80vw;
+        max-height: 400px;
+        height: 80vw;
+    }
+
+    &__keywords {
+        h2 {
+            font-size: 1.6em;
+            margin-bottom: 8px;
+            margin-top: 16px;
+        }
+
+        h3 {
+            color: $primary-color;
+        }
+        @media #{$large} {
+            text-align: left;
+            width: 218px;
+            margin-left: 40px;
+
+            li {
+                margin-bottom: 0.5em;
+            }
+          }
+
+          @media #{$xlarge} {
+            margin-bottom: 200px;
+          }
+    
+    }
+
+    &__title {
+        h2::after {
+            content: "We like to";
+            color: $secondary-color-1;
+            font-weight: bold;
+            animation: value-title 12s steps(1, start) infinite;
+            animation-delay: 6s;
+        }
+
+        @media #{$large} {
+            width: 234px;
+            margin-right: 24px;
+            margin-bottom: 450px;
+            text-align: right;
+          }
+    }
+
+    &__image-container {
+        background-image: url('../assets/value/01_value_search.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        animation: value-graph 12s steps(1, start) infinite;
+        animation-delay: 1.5s;
+        margin: 0 auto;
+    }
+
+    @media #{$medium} {
+        margin: 0 auto 180px auto;
+
+        &__figure {
+            max-width: 500px;
+            max-height: 500px;
+            height: 500px;
+        }
+
+    }
+
+    @media #{$large} {
+        margin: 0 auto 280px auto;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        height: 500px;
+
+        &__figure {
+            margin: 0;
+        }
+
+    }
+    
+}
+
+@keyframes value-title {
+    0% {
+        content: "We like to";
+    }
+    50% {
+        content: "We are";
+        color: $secondary-color-2;
+    }
+    100% {
+        content: "We like to";
+    }
+}
+
+@keyframes value-graph {
+    0% {
+        background-image: url('/assets/img/value/mobile/1_search_sm.png');
+    }
+    12.5% {
+        background-image: url('/assets/img/value/mobile/2_ideate_sm.png');
+    }
+    25% {
+        background-image: url('/assets/img/value/mobile/3_define_sm.png');
+    }
+    37.5% {
+        background-image: url('/assets/img/value/mobile/4_plan_sm.png');
+    }
+    50% {
+        background-image: url('/assets/img/value/mobile/5_imaginative_sm.png');
+    }
+    62.5% {
+        background-image: url('/assets/img/value/mobile/6_communicative_sm.png');
+    }
+    75% {
+        background-image: url('/assets/img/value/mobile/7_organized_sm.png');
+    }
+    87.5% {
+        background-image: url('/assets/img/value/mobile/8_logical_sm.png');
+    }
+    100% {
+        background-image: url('/assets/img/value/mobile/1_search_sm.png');
+    }
+    
+}
+@media #{$medium} {
+    @keyframes value-graph {
+        0% {
+        background-image: url('/assets/img/value/desktop/1_search.png');
+        }
+        12.5% {
+        background-image: url('/assets/img/value/desktop/2_ideate.png');
+        }
+        25% {
+        background-image: url('/assets/img/value/desktop/3_define.png');
+        }
+        37.5% {
+        background-image: url('/assets/img/value/desktop/4_plan.png');
+        }
+        50% {
+        background-image: url('/assets/img/value/desktop/5_imaginative.png');
+        }
+        62.5% {
+        background-image: url('/assets/img/value/desktop/6_communicative.png');
+        }
+        75% {
+        background-image: url('/assets/img/value/desktop/7_organized.png');
+        }
+        87.5% {
+        background-image: url('/assets/img/value/desktop/8_logical.png');
+        }
+        100% {
+        background-image: url('/assets/img/value/desktop/1_search.png');
+        }
+    }
+}
