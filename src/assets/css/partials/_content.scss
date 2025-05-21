@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $non-serif-font;
+  background-color: $background-color;
+  color: $primary-color;
+
+  main {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}

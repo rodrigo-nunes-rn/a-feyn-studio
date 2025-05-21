@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM sans", Arial, Helvetica, sans-serif;
+  background-color: #091915;
+  color: #FFF6F1;
+}
+body main {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+body img,
+body video {
+  max-width: 100%;
+  height: auto;
+}
+body ul {
+  list-style-type: none;
+}
+
+footer {
+  background-color: #FFF6F1;
+  color: #091915;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 24px;
+}
+footer .footer__contacts {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+footer .footer__developed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer h3 {
+  font-family: "Unna", "Georgia", Times, "Times New Roman", serif;
+  font-weight: 700;
+  color: #091915;
+}
