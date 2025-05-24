@@ -145,13 +145,13 @@ body strong {
   text-align: center;
   margin: 0;
   font-family: "Unna", "Georgia", Times, "Times New Roman", serif;
-  /* ==================== 2.1 HERO "GIF" ANIMATION ==================== */
   /* ==================== 2.2 FEYN ANIMATION ==================== */
 }
 #hero .hero-content {
   margin-right: 48px;
+  /* ==================== 2.1 HERO "GIF" ANIMATION ==================== */
 }
-#hero .hero-content__we-are {
+#hero .hero-content .hero-content__we-are {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,17 +159,17 @@ body strong {
   letter-spacing: 4px;
   text-align: right;
 }
-#hero .hero-figure {
+#hero .hero-content .hero-figure {
   width: 100px;
 }
-#hero .hero-content__studio {
+#hero .hero-content .hero-content__studio {
   text-align: left;
   margin-top: 1em;
   margin-left: 80%;
   letter-spacing: 8px;
   color: #00DB75;
 }
-#hero .hero__image-container {
+#hero .hero-content .hero__image-container {
   background-image: url("../assets/hero/hero_01.jpg");
   background-size: cover;
   background-position: center;
@@ -420,6 +420,7 @@ body strong {
   margin-bottom: 0.6em;
 }
 
+/* ==================== 3.2 VALUE PROPOSITION ==================== */
 .value-proposition {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -446,12 +447,14 @@ body strong {
   height: 80vw;
 }
 .value-proposition__keywords h2 {
-  font-size: 1.6em;
-  margin-bottom: 8px;
-  margin-top: 16px;
+  font-size: 1.4em;
+  margin-bottom: 16px;
+  margin-top: 32px;
 }
 .value-proposition__keywords h3 {
   color: #FFF6F1;
+  font-size: 1em;
+  margin-bottom: 0.1em;
 }
 @media (min-width: 992px) {
   .value-proposition__keywords {
@@ -463,15 +466,10 @@ body strong {
     margin-bottom: 0.5em;
   }
 }
-@media (min-width: 1200px) {
-  .value-proposition__keywords {
-    margin-bottom: 200px;
-  }
-}
 .value-proposition__title h2::after {
   content: "We like to";
   color: #FF8B1F;
-  font-weight: bold;
+  font-weight: 700;
   -webkit-animation: value-title 12s steps(1, start) infinite;
           animation: value-title 12s steps(1, start) infinite;
   -webkit-animation-delay: 6s;
@@ -524,6 +522,11 @@ body strong {
   }
   .value-proposition__figure {
     margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .value-proposition {
+    margin-bottom: 200px;
   }
 }
 
@@ -670,6 +673,65 @@ body strong {
     }
   }
 }
+/* ==================== 3.3 CALL TO ACTION ==================== */
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 240px 0;
+}
+.cta h2 {
+  margin-bottom: 16px;
+  color: #00DB75;
+  text-align: center;
+  font-size: 2em;
+}
+@media (min-width: 992px) {
+  .cta {
+    margin: 200px 0;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  background: transparent;
+  color: #00DB75;
+  font-weight: bold;
+  padding: 14px 36px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border: 2px solid #00DB75;
+  -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  margin-top: 8px;
+}
+@media (min-width: 992px) {
+  .cta-button:hover {
+    background: #00DB75;
+    color: #fff;
+    -webkit-transform: translateY(-2px) scale(1.04);
+            transform: translateY(-2px) scale(1.04);
+    -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: #00DB75;
+  }
+}
+
 #who {
   display: -webkit-box;
   display: -ms-flexbox;
