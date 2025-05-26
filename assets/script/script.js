@@ -1,11 +1,11 @@
 // Get all the project details
-const projectDetails = document.querySelectorAll(".what__project");
+const projectDetails = document.querySelectorAll(".project");
 const footer = document.querySelector("footer"); // The footer section
 
 projectDetails.forEach((project, index) => {
-    const details = project.querySelector(`#what__details-element-${index + 1}`);
-    const summary = project.querySelector(`#what__summary-element-${index + 1}`);
-    const expandedContent = project.querySelector(`#what__expanded-content-${index + 1}`);
+    const details = project.querySelector(`#project__details-element-${index + 1}`);
+    const summary = project.querySelector(`#project__summary-element-${index + 1}`);
+    const expandedContent = project.querySelector(`#project__expanded-content-${index + 1}`);
     const nextProject = projectDetails[index + 1]; // Get the next project
     const svgElement = summary.querySelector("svg");
 
@@ -40,7 +40,7 @@ projectDetails.forEach((project, index) => {
 
         if (details.open) {
             // Change text and rotate the SVG
-            summary.querySelector('.what__summary-text').textContent = 'Show less';
+            summary.querySelector('.project__summary-text').textContent = 'Show less';
             svgElement.style.transform = "rotate(180deg)";
 
             // Move the summary (text and SVG) smoothly below the expanded content
@@ -82,7 +82,7 @@ projectDetails.forEach((project, index) => {
 
             // Reset the summary position and text when closed
             summary.style.transform = "translateY(0)";
-            summary.querySelector('.what__summary-text').textContent = 'See More';
+            summary.querySelector('.project__summary-text').textContent = 'See More';
             svgElement.style.transform = "rotate(0deg)";
 
             // Collapse the content smoothly
@@ -120,7 +120,7 @@ projectDetails.forEach((project, index) => {
 });
 
 function initializeImagePopup() {
-    const galleryImages = document.querySelectorAll('.what__gallery img');
+    const galleryImages = document.querySelectorAll('.project__gallery img');
     const popup = document.querySelector('.image-popup');
     const popupImage = popup.querySelector('.popup-image');
     const popupOverlay = popup.querySelector('.popup-overlay');
