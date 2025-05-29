@@ -415,6 +415,7 @@
 .cta-button {
   display: inline-block;
   background: transparent;
+  text-align: center;
   color: $secondary-color-2;
   font-weight: bold;
   padding: 14px 36px;
@@ -424,6 +425,10 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
   margin-top: 8px;
+
+  &__full-width {
+  width: 100%;
+  }
 
   @media #{$large} {
     &:hover {
