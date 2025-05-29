@@ -1,4 +1,15 @@
-// Get all the project details
+
+// Custom Cursor
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
+
+
+
+
 const projectDetails = document.querySelectorAll(".project");
 const footer = document.querySelector("footer"); // The footer section
 
