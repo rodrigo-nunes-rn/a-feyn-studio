@@ -724,7 +724,7 @@ body strong {
   }
 }
 
-.cta-button {
+.btn--primary {
   display: inline-block;
   background: transparent;
   text-align: center;
@@ -742,8 +742,11 @@ body strong {
   transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
   margin-top: 8px;
 }
+.btn--primary__full-width {
+  width: 100%;
+}
 @media (min-width: 992px) {
-  .cta-button:hover {
+  .btn--primary:hover {
     background: #00DB75;
     color: #fff;
     -webkit-transform: translateY(-2px) scale(1.04);
