@@ -426,10 +426,6 @@
   transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
   margin-top: 8px;
 
-  &__full-width {
-  width: 100%;
-  }
-
   @media #{$large} {
     &:hover {
       background: $secondary-color-2;

@@ -93,6 +93,7 @@ body {
 body main {
   padding-left: 24px;
   padding-right: 24px;
+  min-height: 100vh;
 }
 body img,
 body video {
@@ -741,9 +742,6 @@ body strong {
   transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
   margin-top: 8px;
 }
-.cta-button__full-width {
-  width: 100%;
-}
 @media (min-width: 992px) {
   .cta-button:hover {
     background: #00DB75;
@@ -1140,14 +1138,24 @@ body strong {
           justify-content: center;
   text-align: center;
   margin-top: 64px;
-  margin-bottom: 200px;
+}
+.project h1 {
+  color: #FF8B1F;
+}
+.project h2 {
+  font-size: 2.4em;
+  color: #FFF6F1;
+  margin-top: 32px;
+  font-style: normal;
 }
 .project__keywords {
-  margin-top: 16px;
+  margin: 16px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
+  max-width: 500px;
+  width: 100%;
 }
 .project__focus {
   text-align: right;
@@ -1158,13 +1166,16 @@ body strong {
   width: 50%;
 }
 .project__expanded-content-1 {
-  margin: 0 auto;
+  margin: 32px auto;
   text-align: left;
   max-width: 500px;
-  max-height: 0;
+  width: 100%;
 }
-.project__expanded-content-1 p, .project__expanded-content-1 h3 {
+.project__expanded-content-1 p {
   margin: 16px auto;
+}
+.project__expanded-content-1 h3 {
+  margin: 32px auto 0 auto;
 }
 .project__project-links {
   display: -webkit-box;
@@ -1258,6 +1269,9 @@ body strong {
 @media (min-width: 992px) {
   .project__carousel {
     display: none;
+  }
+  .project__expanded-content-1 {
+    position: relative;
   }
   .project__gallery {
     position: fixed;
