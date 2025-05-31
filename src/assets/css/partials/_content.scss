@@ -75,4 +75,62 @@ body {
   strong {
     font-weight: 900;
   }
+
+  .btn {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    &--primary {
+      color: $secondary-color-2;
+      padding: 14px 36px;
+      border: 2px solid $secondary-color-2;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+
+      @media #{$large} {
+        &:hover {
+          background: $secondary-color-2;
+          color: $primary-color;
+          transform: scale(1.04);
+          box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+          border-color: $secondary-color-2;
+        }
+      }
+
+      &:active {
+        background: $secondary-color-2;
+        color: $primary-color;
+        transform: scale(1);
+        border-color: $secondary-color-2;
+      }
+    }
+
+    &--secondary {
+      color: $primary-color;
+      padding: 8px 36px;
+      border: 2px solid $primary-color;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+
+      @media #{$large} {
+        &:hover {
+          color: $secondary-color-1;
+          transform: scale(1.02);
+          box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+          text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+          border-color: $secondary-color-1;
+        }
+      }
+
+      &:active {
+        color: $secondary-color-1;
+        transform: scale(1);
+        border-color: $secondary-color-1;
+      }
+    }
+  }
+
 }

@@ -148,6 +148,70 @@ body a:active {
 body strong {
   font-weight: 900;
 }
+body .btn {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+body .btn--primary {
+  color: #00DB75;
+  padding: 14px 36px;
+  border: 2px solid #00DB75;
+  -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+}
+@media (min-width: 992px) {
+  body .btn--primary:hover {
+    background: #00DB75;
+    color: #FFF6F1;
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    border-color: #00DB75;
+  }
+}
+body .btn--primary:active {
+  background: #00DB75;
+  color: #FFF6F1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border-color: #00DB75;
+}
+body .btn--secondary {
+  color: #FFF6F1;
+  padding: 8px 36px;
+  border: 2px solid #FFF6F1;
+  -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+}
+@media (min-width: 992px) {
+  body .btn--secondary:hover {
+    color: #FF8B1F;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: #FF8B1F;
+  }
+}
+body .btn--secondary:active {
+  color: #FF8B1F;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border-color: #FF8B1F;
+}
 
 #hero {
   display: -webkit-box;
@@ -713,7 +777,7 @@ body strong {
   margin: 240px 0;
 }
 .cta h2 {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   color: #00DB75;
   text-align: center;
   font-size: 2em;
@@ -721,40 +785,6 @@ body strong {
 @media (min-width: 992px) {
   .cta {
     margin: 200px 0;
-  }
-}
-
-.btn--primary {
-  display: inline-block;
-  background: transparent;
-  text-align: center;
-  color: #00DB75;
-  font-weight: bold;
-  padding: 14px 36px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  border: 2px solid #00DB75;
-  -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-  -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
-  transition: background 0.3s, color 0.3s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
-  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
-  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
-  margin-top: 8px;
-}
-.btn--primary__full-width {
-  width: 100%;
-}
-@media (min-width: 992px) {
-  .btn--primary:hover {
-    background: #00DB75;
-    color: #fff;
-    -webkit-transform: translateY(-2px) scale(1.04);
-            transform: translateY(-2px) scale(1.04);
-    -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-color: #00DB75;
   }
 }
 
@@ -1188,8 +1218,10 @@ body strong {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  max-width: 500px;
+  width: 100%;
   z-index: 10;
-  margin: auto;
+  margin: 32px auto;
 }
 
 /* ==================== 4.2 CAROUSEL IMAGES ==================== */
