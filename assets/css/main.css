@@ -1314,6 +1314,11 @@ body .btn--secondary:active {
   max-width: 100%;
   max-height: 100%;
 }
+@media (min-width: 992px) {
+  .project__carousel {
+    display: none;
+  }
+}
 
 @-webkit-keyframes slide {
   0%, 25% {
@@ -1353,15 +1358,10 @@ body .btn--secondary:active {
   }
 }
 /* ==================== 4.3 GALLERY ==================== */
-.project__gallery,
-.image-popup {
+.project__gallery {
   display: none;
 }
-
 @media (min-width: 992px) {
-  .project__carousel {
-    display: none;
-  }
   .project__gallery {
     position: fixed;
     top: 0;
@@ -1373,6 +1373,9 @@ body .btn--secondary:active {
     z-index: 2;
     display: block;
     gap: 10px;
+    /* --- PROJECT - ESTOJO --- */
+    /* --- PROJECT - RATHER --- */
+    /* --- PROJECT - MEMORIES --- */
   }
   .project__gallery img {
     display: block;
@@ -1394,7 +1397,6 @@ body .btn--secondary:active {
     opacity: 100%;
     clip-path: none;
   }
-  /* --- PROJECT - ESTOJO --- */
   .project__gallery--estojo img:nth-child(1) {
     top: 200px;
     left: 0%;
@@ -1423,7 +1425,6 @@ body .btn--secondary:active {
     height: 250px;
     width: auto;
   }
-  /* --- PROJECT - RATHER --- */
   .project__gallery--rather img:nth-child(1) {
     top: 200px;
     left: 0%;
@@ -1445,37 +1446,41 @@ body .btn--secondary:active {
     height: 300px;
     width: auto;
   }
-  /* --- PROJECT - MEMORIES --- */
-  .project__gallery--estojo img:nth-child(1) {
+  .project__gallery--memories img:nth-child(1) {
     top: 200px;
     left: 0%;
     max-width: 1200px;
     height: 250px;
     width: auto;
   }
-  .project__gallery--estojo img:nth-child(2) {
+  .project__gallery--memories img:nth-child(2) {
     top: 400px;
     left: 5%;
     max-width: 900px;
     height: 300px;
     width: auto;
   }
-  .project__gallery--estojo img:nth-child(3) {
+  .project__gallery--memories img:nth-child(3) {
     top: 250px;
     right: 0%;
     max-width: 900px;
     height: 300px;
     width: auto;
   }
-  .project__gallery--estojo img:nth-child(4) {
+  .project__gallery--memories img:nth-child(4) {
     top: 650px;
     right: 10%;
     max-width: 800px;
     height: 250px;
     width: auto;
   }
+}
+
+.image-popup {
+  display: none;
+}
+@media (min-width: 992px) {
   .image-popup {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1511,6 +1516,7 @@ body .btn--secondary:active {
     height: 100%;
   }
 }
+
 #who {
   display: -webkit-box;
   display: -ms-flexbox;
