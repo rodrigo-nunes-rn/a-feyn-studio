@@ -15,13 +15,13 @@
             
             <div class="who__person-1">
                 <div class="who__name-photo-1">
-                    <div>
+                    <div class="who__name">
                         <p>Zenha</p>
                         <p>Preto</p>
                     </div>
                     <figure class="who__figure-1"> <img src="assets/img/who/zenha-preto_foto.JPG" alt="photo of zenha preto standing in a chilling pose smilling at the camera"></figure>
                 </div>
-                <div>
+                <div class="who__description">
                     <ul class="who__interests">
                         <li>COMMUNICATION</li>
                         <li>INFORMATION DESIGN</li>
@@ -38,13 +38,13 @@
             
             <div class="who__person-2">
                 <div class="who__name-photo-2">
-                    <div>
+                    <div class="who__name">
                         <p>Rodrigo</p>
                         <p>Nunes</p>
                     </div>
                     <figure class="who__figure-2"> <img src="assets/img/who/rodrigo-nunes_foto.JPG" alt="a photo of rodrigo seat down in a layed down pose, with a funny surprised look to the camera"></figure>
                     </div>
-                    <div>
+                    <div class="who__description">
                         <ul class="who__interests-2">
                             <li>COMMUNICATION DESIGN</li>
                             <li>RESEARCH</li>
@@ -62,4 +62,52 @@
 </main>
 
     <!-- @import partials/footer -->
+    <script>
+      // Only run DVD screensaver animation above the large breakpoint (992px)
+      function isLargeScreen() {
+        return window.innerWidth >= 992;
+      }
+
+      function dvdBounce(selector) {
+        const el = document.querySelector(selector);
+        if (!el) return;
+
+        el.style.position = 'absolute';
+        let x = Math.random() * (window.innerWidth - el.offsetWidth);
+        let y = Math.random() * (window.innerHeight - el.offsetHeight);
+        let dx = (0.7 + Math.random() * 0.7); // Slower speed
+        let dy = (0.7 + Math.random() * 0.7); // Slower speed
+
+        function move() {
+          if (!isLargeScreen()) {
+            // Stop animation and reset position if screen is too small
+            el.style.position = '';
+            el.style.left = '';
+            el.style.top = '';
+            return;
+          }
+
+          x += dx;
+          y += dy;
+
+          if (x <= 0 || x + el.offsetWidth >= window.innerWidth) dx *= -1;
+          if (y <= 0 || y + el.offsetHeight >= window.innerHeight) dy *= -1;
+
+          el.style.left = x + 'px';
+          el.style.top = y + 'px';
+
+          requestAnimationFrame(move);
+        }
+        move();
+      }
+
+      function startDVDAnimations() {
+        dvdBounce('.who__person-1');
+        dvdBounce('.who__person-2');
+      }
+
+      // Run on load and on resize
+      window.addEventListener('load', startDVDAnimations);
+      window.addEventListener('resize', startDVDAnimations);
+    </script>
 </html>

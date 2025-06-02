@@ -41,9 +41,18 @@
     display: flex;
     gap: 48px;
 
+    .who__name {
+      display: none;
+    }
+
     p {
       letter-spacing: 12px;
     }
+    
+  }
+
+  .who__description {
+    display: none;
   }
 
   .who__name-photo-2 {

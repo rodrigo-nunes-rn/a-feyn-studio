@@ -238,7 +238,7 @@ body .btn--secondary:active {
   margin-right: 48px;
   /* ==================== 2.1 HERO "GIF" ANIMATION ==================== */
 }
-#hero .hero-content .hero-content__we-are {
+#hero .hero-content__we-are {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,17 +246,17 @@ body .btn--secondary:active {
   letter-spacing: 4px;
   text-align: right;
 }
-#hero .hero-content .hero-figure {
+#hero .hero-content__figure {
   width: 100px;
 }
-#hero .hero-content .hero-content__studio {
+#hero .hero-content__studio {
   text-align: left;
   margin-top: 1em;
   margin-left: 80%;
   letter-spacing: 8px;
   color: #00DB75;
 }
-#hero .hero-content .hero__image-container {
+#hero .hero-content .hero-content__image-container {
   background-image: url("../assets/hero/hero_01.jpg");
   background-size: cover;
   background-position: center;
@@ -265,6 +265,12 @@ body .btn--secondary:active {
   -webkit-animation: hero-images 5s steps(1, start) infinite;
           animation: hero-images 5s steps(1, start) infinite;
   margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  #hero .hero-content .hero-content__image-container {
+    width: 186px;
+    height: 250px;
+  }
 }
 @-webkit-keyframes hero-images {
   0% {
@@ -439,12 +445,8 @@ body .btn--secondary:active {
     letter-spacing: 4px;
     text-align: right;
   }
-  #hero .hero-figure {
+  #hero .hero-content__figure {
     width: 186px;
-  }
-  #hero .hero__image-container {
-    width: 186px;
-    height: 250px;
   }
 }
 
@@ -1566,9 +1568,16 @@ body .btn--secondary:active {
   display: flex;
   gap: 48px;
 }
+#who .who__name-photo-1 .who__name,
+#who .who__name-photo-2 .who__name {
+  display: none;
+}
 #who .who__name-photo-1 p,
 #who .who__name-photo-2 p {
   letter-spacing: 12px;
+}
+#who .who__description {
+  display: none;
 }
 #who .who__name-photo-2 {
   -webkit-box-orient: horizontal;

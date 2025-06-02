@@ -11,18 +11,18 @@
   .hero-content {
     margin-right: 48px;
   
-    .hero-content__we-are {
+    &__we-are {
       display: flex;
       gap: 16px;
       letter-spacing: 4px;
       text-align: right;
     }
   
-    .hero-figure {
+    &__figure {
       width: 100px;
     }
   
-    .hero-content__studio {
+    &__studio {
       text-align: left;
       margin-top: 1em;
       margin-left: 80%;
@@ -32,7 +32,7 @@
 
     /* ==================== 2.1 HERO "GIF" ANIMATION ==================== */
 
-    .hero__image-container {
+    .hero-content__image-container {
       background-image: url('../assets/hero/hero_01.jpg'); 
       background-size: cover;
       background-position: center;
@@ -40,6 +40,11 @@
       height: 150px;
       animation: hero-images 5s steps(1, start) infinite;
       margin: 0 auto;
+
+      @media #{$xlarge} {
+        width: 186px;
+        height: 250px;
+      }
     }
 
     @keyframes hero-images {
@@ -136,22 +141,19 @@
   }
 
   @media #{$xlarge} {
-      .hero-content__we-are {
+    .hero-content__we-are {
       display: flex;
       gap: 16px;
       letter-spacing: 4px;
       text-align: right;
     }
 
-    .hero-figure {
+    .hero-content__figure {
       width: 186px;
     }
 
-    .hero__image-container {
-      width: 186px;
-      height: 250px;
-    }
   }
+    
 }
 
 /* ====================
