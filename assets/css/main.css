@@ -1209,7 +1209,7 @@ body .btn--secondary:active {
   text-align: left;
   width: 50%;
 }
-.project__expanded-content-1 {
+.project__about {
   position: relative;
   margin: 32px auto;
   text-align: left;
@@ -1217,13 +1217,13 @@ body .btn--secondary:active {
   width: 100%;
   z-index: 1;
 }
-.project__expanded-content-1 p {
+.project__about p {
   margin: 16px auto;
 }
-.project__expanded-content-1 h3 {
+.project__about h3 {
   margin: 32px auto 0 auto;
 }
-.project__project-links {
+.project__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1239,16 +1239,15 @@ body .btn--secondary:active {
 }
 
 /* ==================== 4.2 CAROUSEL IMAGES ==================== */
-.project__carousel * {
-  margin: 0;
-}
-
 .project__carousel {
   width: 100%;
   max-width: 500px;
   aspect-ratio: 16/9;
   overflow: hidden;
   margin: 40px auto;
+}
+.project__carousel * {
+  margin: 0;
 }
 .project__carousel-track {
   display: -webkit-box;
@@ -1319,9 +1318,6 @@ body .btn--secondary:active {
   .project__carousel {
     display: none;
   }
-  .project__expanded-content-1 {
-    position: relative;
-  }
   .project__gallery {
     position: fixed;
     top: 0;
@@ -1354,29 +1350,80 @@ body .btn--secondary:active {
     opacity: 100%;
     clip-path: none;
   }
-  /* --- PROJECT-1 --- */
-  .project__gallery img:nth-child(1) {
+  /* --- PROJECT - ESTOJO --- */
+  .project__gallery--estojo img:nth-child(1) {
     top: 200px;
     left: 0%;
     max-width: 1200px;
     height: 250px;
     width: auto;
   }
-  .project__gallery img:nth-child(2) {
+  .project__gallery--estojo img:nth-child(2) {
     top: 400px;
     left: 5%;
     max-width: 900px;
     height: 300px;
     width: auto;
   }
-  .project__gallery img:nth-child(3) {
+  .project__gallery--estojo img:nth-child(3) {
     top: 250px;
     right: 0%;
     max-width: 900px;
     height: 300px;
     width: auto;
   }
-  .project__gallery img:nth-child(4) {
+  .project__gallery--estojo img:nth-child(4) {
+    top: 650px;
+    right: 10%;
+    max-width: 800px;
+    height: 250px;
+    width: auto;
+  }
+  /* --- PROJECT - RATHER --- */
+  .project__gallery--rather img:nth-child(1) {
+    top: 200px;
+    left: 0%;
+    max-width: 1200px;
+    height: 250px;
+    width: auto;
+  }
+  .project__gallery--rather img:nth-child(2) {
+    top: 400px;
+    left: 5%;
+    max-width: 900px;
+    height: 300px;
+    width: auto;
+  }
+  .project__gallery--rather img:nth-child(3) {
+    top: 250px;
+    right: 0%;
+    max-width: 900px;
+    height: 300px;
+    width: auto;
+  }
+  /* --- PROJECT - MEMORIES --- */
+  .project__gallery--estojo img:nth-child(1) {
+    top: 200px;
+    left: 0%;
+    max-width: 1200px;
+    height: 250px;
+    width: auto;
+  }
+  .project__gallery--estojo img:nth-child(2) {
+    top: 400px;
+    left: 5%;
+    max-width: 900px;
+    height: 300px;
+    width: auto;
+  }
+  .project__gallery--estojo img:nth-child(3) {
+    top: 250px;
+    right: 0%;
+    max-width: 900px;
+    height: 300px;
+    width: auto;
+  }
+  .project__gallery--estojo img:nth-child(4) {
     top: 650px;
     right: 10%;
     max-width: 800px;
@@ -1399,11 +1446,11 @@ body .btn--secondary:active {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
   }
-  .popup-image {
+  .image-popup__image {
     max-width: 80%;
     max-height: 80%;
   }
-  .popup-close {
+  .image-popup__close {
     position: absolute;
     top: 64px;
     right: 64px;
@@ -1412,7 +1459,7 @@ body .btn--secondary:active {
     mix-blend-mode: difference;
     cursor: pointer;
   }
-  .popup-overlay {
+  .image-popup__overlay {
     position: absolute;
     top: 0;
     left: 0;
