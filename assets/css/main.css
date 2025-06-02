@@ -1202,9 +1202,6 @@ body .btn--secondary:active {
     margin: 15% auto 10% 20%;
   }
 }
-/* ====================
-4. project SECTION
-==================== */
 .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1226,6 +1223,13 @@ body .btn--secondary:active {
 }
 .project h1 {
   color: #FF8B1F;
+  margin: auto;
+  font-size: clamp(2em, 12vw, 6em);
+}
+@media (min-width: 992px) {
+  .project h1 {
+    font-size: clamp(2em, 10vw, 12em);
+  }
 }
 .project h2 {
   font-size: 2.4em;
@@ -1274,9 +1278,9 @@ body .btn--secondary:active {
   display: -ms-flexbox;
   display: flex;
   gap: 5%;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 500px;
   width: 100%;
   position: relative;
@@ -1386,6 +1390,7 @@ body .btn--secondary:active {
     position: absolute;
     -webkit-filter: blur(8px);
             filter: blur(8px);
+    will-change: filter;
     -webkit-transition: -webkit-filter 0.3s ease;
     transition: -webkit-filter 0.3s ease;
     transition: filter 0.3s ease;
