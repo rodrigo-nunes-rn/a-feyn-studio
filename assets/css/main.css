@@ -1,4 +1,5 @@
 .custom-cursor {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,6 +17,11 @@
   transition: -webkit-transform 0.05s ease;
   transition: transform 0.05s ease;
   transition: transform 0.05s ease, -webkit-transform 0.05s ease;
+}
+@media (min-width: 992px) {
+  .custom-cursor {
+    display: block;
+  }
 }
 
 header {
@@ -1575,14 +1581,25 @@ body .btn--secondary:active {
 }
 #who .who__name-photo-1 .who__name,
 #who .who__name-photo-2 .who__name {
-  display: none;
+  opacity: 1;
+}
+@media (min-width: 992px) {
+  #who .who__name-photo-1 .who__name,
+  #who .who__name-photo-2 .who__name {
+    opacity: 0;
+  }
 }
 #who .who__name-photo-1 p,
 #who .who__name-photo-2 p {
   letter-spacing: 12px;
 }
 #who .who__description {
-  display: none;
+  opacity: 1;
+}
+@media (min-width: 992px) {
+  #who .who__description {
+    opacity: 0;
+  }
 }
 #who .who__name-photo-2 {
   -webkit-box-orient: horizontal;

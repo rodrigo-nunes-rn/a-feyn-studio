@@ -42,7 +42,12 @@
     gap: 48px;
 
     .who__name {
-      display: none;
+      opacity: 1;
+
+      @media #{$large} {
+      opacity: 0;
+    }
+    
     }
 
     p {
@@ -52,7 +57,11 @@
   }
 
   .who__description {
-    display: none;
+    opacity: 1;
+
+    @media #{$large} {
+      opacity: 0;
+    }
   }
 
   .who__name-photo-2 {

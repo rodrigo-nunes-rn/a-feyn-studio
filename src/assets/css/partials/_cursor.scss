@@ -1,4 +1,5 @@
 .custom-cursor {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,4 +12,8 @@
   filter: blur(2px);
   transform: translate(-50%, -50%);
   transition: transform 0.05s ease;
+
+  @media #{$large} {
+      display: block;
+    }
 }
