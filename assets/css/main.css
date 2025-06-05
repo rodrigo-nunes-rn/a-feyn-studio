@@ -1640,21 +1640,21 @@ body .btn--secondary:active {
 }
 #who .who__interests li,
 #who .who__contacts li {
-  color: var(--secondary-color-2);
+  color: #FFF6F1;
 }
 #who .who__interests a,
 #who .who__contacts a {
-  color: var(--secondary-color-2);
+  color: #00DB75;
 }
 #who .who__interests a:hover,
 #who .who__contacts a:hover {
-  color: var(--secondary-color-1);
+  color: #FF8B1F;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 #who .who__interests a:active,
 #who .who__contacts a:active {
-  color: var(--primary-color);
+  color: #FFF6F1;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
@@ -1672,21 +1672,21 @@ body .btn--secondary:active {
 }
 #who .who__interests-2 li,
 #who .who__contacts-2 li {
-  color: var(--secondary-color-2);
+  color: #FFF6F1;
 }
 #who .who__interests-2 a,
 #who .who__contacts-2 a {
-  color: var(--secondary-color-2);
+  color: #00DB75;
 }
 #who .who__interests-2 a:hover,
 #who .who__contacts-2 a:hover {
-  color: var(--secondary-color-1);
+  color: #FF8B1F;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 #who .who__interests-2 a:active,
 #who .who__contacts-2 a:active {
-  color: var(--primary-color);
+  color: #FFF6F1;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
