@@ -22,8 +22,8 @@ function dvdBounce(selector, zIndexBase = 10) {
     el.style.position = 'absolute';
     let x = Math.random() * (window.innerWidth - el.offsetWidth);
     let y = Math.random() * (window.innerHeight - el.offsetHeight);
-    let dx = (0.7 + Math.random() * 3); // Slower speed
-    let dy = (0.7 + Math.random() * 3); // Slower speed
+    let dx = (0.7 + Math.random() * 2); // Slower speed
+    let dy = (0.7 + Math.random() * 2); // Slower speed
     let animationFrameId = null;
     let paused = false;
 
