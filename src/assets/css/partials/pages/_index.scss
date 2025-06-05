@@ -1,3 +1,7 @@
+/* ====================
+1. HERO SECTION
+==================== */
+
 #hero {
   display: flex;             
   flex-direction: column;    
@@ -7,6 +11,8 @@
   text-align: center;       
   margin: 0;              
   font-family: $serif-font;
+
+  /* ==================== 1.1. HERO CONTENT ==================== */
 
   .hero-content {
     margin-right: 48px;
@@ -30,9 +36,9 @@
       color: $secondary-color-2;
     }
 
-    /* ==================== 2.1 HERO "GIF" ANIMATION ==================== */
+    /* ========= 1.1.1. HERO "GIF" ANIMATION ========= */
 
-    .hero-content__image-container {
+    &__image-container {
       background-image: url('../assets/hero/hero_01.jpg'); 
       background-size: cover;
       background-position: center;
@@ -94,73 +100,74 @@
         background-image: url('/assets/img/hero/hero_01.jpg'); 
       }
     }
-  }
-  /* ==================== 2.2 FEYN ANIMATION ==================== */
 
-  .hero-studio__feyn {
-    position: relative;
-  }
+    /* ==================== 1.1.2. FEYN ANIMATION ==================== */
 
-  .hero-studio__feyn::after {
-    content: "feyn";
-    color: $secondary-color-2;
-    font-weight: bold;
-    animation: changeWords 5s steps(1, start) infinite;
-  }
+    &__feyn {
+      position: relative;
+    }
 
-
-  @keyframes changeWords {
-    0%, 14.29% {
+    &__feyn::after {
       content: "feyn";
-      color: $secondary-color-1;
-    }
-    14.29%, 28.57% {
-      content: "dynamic";
       color: $secondary-color-2;
+      font-weight: bold;
+      animation: changeWords 5s steps(1, start) infinite;
     }
-    28.57%, 42.86% {
-      content: "curious";
-      color: $secondary-color-2;
+
+
+    @keyframes changeWords {
+      0%, 14.29% {
+        content: "feyn";
+        color: $secondary-color-1;
+      }
+      14.29%, 28.57% {
+        content: "dynamic";
+        color: $secondary-color-2;
+      }
+      28.57%, 42.86% {
+        content: "curious";
+        color: $secondary-color-2;
+      }
+      42.86%, 57.14% {
+        content: "creative";
+        color: $secondary-color-2;
+      }
+      57.14%, 71.43% {
+        content: "quirky";
+        color: $secondary-color-2;
+      }
+      71.43%, 85.71% {
+        content: "conscious";
+        color: $secondary-color-2;
+      }
+      85.71%, 100% {
+        content: "feyn";
+        color: $secondary-color-1;
+      }
     }
-    42.86%, 57.14% {
-      content: "creative";
-      color: $secondary-color-2;
-    }
-    57.14%, 71.43% {
-      content: "quirky";
-      color: $secondary-color-2;
-    }
-    71.43%, 85.71% {
-      content: "conscious";
-      color: $secondary-color-2;
-    }
-    85.71%, 100% {
-      content: "feyn";
-      color: $secondary-color-1;
+
+    @media #{$xlarge} {
+      .hero-content__we-are {
+        display: flex;
+        gap: 16px;
+        letter-spacing: 4px;
+        text-align: right;
+      }
+
+      .hero-content__figure {
+        width: 186px;
+      }
+
     }
   }
 
-  @media #{$xlarge} {
-    .hero-content__we-are {
-      display: flex;
-      gap: 16px;
-      letter-spacing: 4px;
-      text-align: right;
-    }
-
-    .hero-content__figure {
-      width: 186px;
-    }
-
-  }
-    
 }
 
 /* ====================
-3. WHY SECTION
+2. WHY SECTION
 ==================== */
 
-/* ==================== 3.1 INTRODUCTION ==================== */
+/* ==================== 2.1. INTRODUCTION ==================== */
 .why {
   &__introduction {
     display: flex;
@@ -219,7 +226,7 @@
   }
 }
 
-/* ==================== 3.2 VALUE PROPOSITION ==================== */
+/* ==================== 2.2. VALUE PROPOSITION ==================== */
 .value-proposition {
   display: flex;
   flex-direction: column;
@@ -394,7 +401,7 @@
   }
 }
 
-/* ==================== 3.3 CALL TO ACTION ==================== */
+/* ==================== 2.3 CALL TO ACTION ==================== */
 .cta {
   display: flex;
   flex-direction: column;

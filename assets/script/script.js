@@ -14,8 +14,7 @@ function isLargeScreen() {
     return window.innerWidth >= 992;
 }
 
-function dvdBounce(selector, zIndexBase = 10) {
-    const el = document.querySelector(selector);
+function dvdBounce(el, zIndexBase = 10) {
     if (!el) return;
 
     el.style.position = 'absolute';
@@ -104,7 +103,7 @@ function dvdBounce(selector, zIndexBase = 10) {
             if (desc) desc.style.opacity = '1';
             // Bring this element to front
             // Find the highest z-index among all .who__person-* elements
-            const allPersons = document.querySelectorAll('[class^="who__person-"]');
+            const allPersons = document.querySelectorAll('[class^="who__person"]');
             let maxZ = zIndexBase;
             allPersons.forEach(person => {
                 const z = parseInt(window.getComputedStyle(person).zIndex) || zIndexBase;
@@ -133,9 +132,9 @@ function dvdBounce(selector, zIndexBase = 10) {
 
 function startDVDAnimations() {
     // Select all elements with class starting with 'who__person-'
-    const persons = document.querySelectorAll('[class^="who__person-"]');
+    const persons = document.querySelectorAll('[class^="who__person"]');
     persons.forEach((el, idx) => {
-        dvdBounce(`.${el.classList[0]}`, 10 + idx);
+        dvdBounce(el, 10 + idx);
     });
 }
 

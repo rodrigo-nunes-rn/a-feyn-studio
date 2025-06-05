@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin: 0px auto;
+  margin: 0px auto 64px auto;
   width: 100%;
   max-width: 800px;
 
   @media #{$large} {
     max-width: 100%;
+    margin-bottom: 0;
   }
 
   h1 {
@@ -15,50 +16,79 @@
     margin-bottom:32px;
   }
 
-  .who__person-1,
-  .who__person-2 {
+  /* ==================== 1.0 WHO PERSON ==================== */
+  
+  .who__person {
     max-width: 500px;
     margin-top: 64px;
 
     p {
       max-width: 500px;
     }
-  }
 
-  .who__person-1 {
-    margin-left: 0;
-    text-align: left;
-  }
-
-  .who__person-2 {
-    margin-right: 0;
-    margin-left: auto;
-    text-align: right;
-
-    @media #{$large} {
-      margin-top: 0;
+    &--1 {
+      margin-left: 0;
+      text-align: left;
     }
-  }
 
-  .who__name-photo-1,
-  .who__name-photo-2 {
-    display: flex;
-    gap: 48px;
-
-    .who__name {
-      opacity: 1;
+    &--2 {
+      margin-right: 0;
+      margin-left: auto;
+      text-align: right;
 
       @media #{$large} {
-      opacity: 0;
-    }
-    
-    }
+        margin-top: 0;
+      }
+    }   
 
-    p {
-      letter-spacing: 12px;
+    /* ========= 1.1 WHO NAME AND PHOTO ========== */
+
+    .who__name-photo {
+      display: flex;
+      gap: 48px;
+
+      &--2 {
+        flex-direction: row-reverse;
+      }
+
+      .who__name {
+        opacity: 1;
+
+        p {
+          letter-spacing: 12px;
+        }
+
+        @media #{$large} {
+          opacity: 0;
+        }
+      
+      }
+
+      .who__figure {
+        width: 40%;
+        overflow: hidden;
+
+        img {
+          width: 100%;    
+          height: 300px;  
+          object-fit: cover; 
+          max-width: none;   
+          max-height: none;
+        }
+
+        &--1 img {
+          transform: scale(1.5) translateY(0%);
+        }
+        
+        &--2 img {
+          transform: scale(1.5) translateY(5%);
+        }
+
+      }
     }
-    
   }
+
+  /* ========= 1.2 WHO DESCRITPION ========== */
 
   .who__description {
     opacity: 1;
@@ -66,84 +96,40 @@
     @media #{$large} {
       opacity: 0;
     }
-  }
 
-  .who__name-photo-2 {
-    flex-direction: row-reverse;
-  }
+    .who__interests,
+    .who__contacts {
+      display: flex;
+      flex-wrap: wrap;
+      line-height: 1.8em;
+      gap: 5%;
+      margin: 16px 0px;
 
-  .who__figure-1,
-  .who__figure-2 {
-    width: 40%;
-    overflow: hidden;
 
-    img {
-      width: 100%;    // or your preferred size
-      height: 300px;   // or your preferred size
-      object-fit: cover; // ensures the image fills the box without distortion
-      max-width: none;   // prevent parent styles from shrinking the image
-      max-height: none;
-    }
-  }
-
-  .who__figure-1 img {
-    transform: scale(1.5) translateY(0%);
-  }
-
-  .who__figure-2 img {
-    transform: scale(1.5) translateY(5%);
-  }
-
-  .who__interests,
-  .who__contacts {
-    display: flex;
-    flex-wrap: wrap;
-    line-height: 1.8em;
-    gap: 5%;
-    margin: 16px 0px;
-
-    li {
-      color: $primary-color;
-    }
-
-    a {
-      color: $secondary-color-2;
-
-      &:hover {
-        color: $secondary-color-1;
-        transition: 0.3s;
-      }
-
-      &:active {
+      li {
         color: $primary-color;
-        transition: 0.1s;
       }
+
+      a {
+        color: $secondary-color-2;
+
+        &:hover {
+          color: $secondary-color-1;
+          transition: 0.3s;
+        }
+
+        &:active {
+          color: $primary-color;
+          transition: 0.1s;
+        }
+      }
+
+      &--2 {
+        flex-direction: row-reverse;
+      }
+
     }
+
   }
 
-  .who__interests-2,
-  .who__contacts-2 {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 5%;
-    margin: 16px 0px;
-
-    li {
-      color: $primary-color;
-    }
-
-    a {
-      color: $secondary-color-2;
-
-      &:hover {
-        color: $secondary-color-1;
-        transition: 0.3s;
-      }
-
-      &:active {
-        color: $primary-color;
-        transition: 0.1s;
-      }
-    }
-  }
 }
