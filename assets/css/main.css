@@ -1541,7 +1541,7 @@ body .btn--secondary:active {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  margin: 64px auto;
+  margin: 0px auto;
   width: 100%;
   max-width: 900px;
 }
