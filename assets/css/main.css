@@ -1562,7 +1562,12 @@ body .btn--secondary:active {
           align-items: stretch;
   margin: 0px auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
+}
+@media (min-width: 992px) {
+  #who {
+    max-width: 100%;
+  }
 }
 #who h1 {
   text-align: center;
@@ -1634,9 +1639,11 @@ body .btn--secondary:active {
 #who .who__figure-1 img,
 #who .who__figure-2 img {
   width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: none;
+  max-height: none;
 }
 #who .who__figure-1 img {
   -webkit-transform: scale(1.5) translateY(0%);

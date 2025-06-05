@@ -4,7 +4,11 @@
   align-items: stretch;
   margin: 0px auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
+
+  @media #{$large} {
+    max-width: 100%;
+  }
 
   h1 {
     text-align: center;
@@ -74,9 +78,11 @@
     overflow: hidden;
 
     img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
+      width: 100%;    // or your preferred size
+      height: 300px;   // or your preferred size
+      object-fit: cover; // ensures the image fills the box without distortion
+      max-width: none;   // prevent parent styles from shrinking the image
+      max-height: none;
     }
   }
 

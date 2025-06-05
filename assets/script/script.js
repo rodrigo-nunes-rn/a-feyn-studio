@@ -1,4 +1,3 @@
-
 // Custom Cursor
 const cursor = document.querySelector('.custom-cursor');
 
@@ -20,16 +19,29 @@ function dvdBounce(selector, zIndexBase = 10) {
     if (!el) return;
 
     el.style.position = 'absolute';
-    let x = Math.random() * (window.innerWidth - el.offsetWidth);
-    let y = Math.random() * (window.innerHeight - el.offsetHeight);
+
+    // Calculate animation area
+    function getArea() {
+        const areaWidth = Math.min(window.innerWidth, 1400);
+        const areaLeft = (window.innerWidth - areaWidth) / 2;
+        const areaHeight = window.innerHeight;
+        return { areaWidth, areaLeft, areaHeight };
+    }
+
+    let { areaWidth, areaLeft, areaHeight } = getArea();
+
+    let x = areaLeft + Math.random() * (areaWidth - el.offsetWidth);
+    let y = Math.random() * (areaHeight - el.offsetHeight);
     let dx = (0.7 + Math.random() * 2); // Slower speed
     let dy = (0.7 + Math.random() * 2); // Slower speed
     let animationFrameId = null;
     let paused = false;
 
     function move() {
+        // Update area on each frame in case of resize
+        ({ areaWidth, areaLeft, areaHeight } = getArea());
+
         if (!isLargeScreen()) {
-            // Stop animation and reset position if screen is too small
             el.style.position = '';
             el.style.left = '';
             el.style.top = '';
@@ -41,8 +53,22 @@ function dvdBounce(selector, zIndexBase = 10) {
         x += dx;
         y += dy;
 
-        if (x <= 0 || x + el.offsetWidth >= window.innerWidth) dx *= -1;
-        if (y <= 0 || y + el.offsetHeight >= window.innerHeight) dy *= -1;
+        if (x <= areaLeft) {
+            x = areaLeft;
+            dx *= -1;
+        }
+        if (x + el.offsetWidth >= areaLeft + areaWidth) {
+            x = areaLeft + areaWidth - el.offsetWidth;
+            dx *= -1;
+        }
+        if (y <= 0) {
+            y = 0;
+            dy *= -1;
+        }
+        if (y + el.offsetHeight >= areaHeight) {
+            y = areaHeight - el.offsetHeight;
+            dy *= -1;
+        }
 
         el.style.left = x + 'px';
         el.style.top = y + 'px';
