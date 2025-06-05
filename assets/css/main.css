@@ -38,8 +38,17 @@ header {
   padding: 8px 24px;
   position: sticky;
   top: 0;
-  background-color: #091915;
-  z-index: 10;
+  background: transparent;
+  z-index: 1000;
+}
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(9, 25, 21, 0.4);
+  -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
 }
 header img {
   width: 40px;
@@ -141,10 +150,12 @@ body h3 {
 body a {
   color: #FFF6F1;
 }
-body a:hover {
-  color: #00DB75;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+@media (min-width: 992px) {
+  body a:hover {
+    color: #00DB75;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
 }
 body a:active {
   color: #FF8B1F;
@@ -155,8 +166,15 @@ body strong {
   font-weight: 900;
 }
 body .btn {
-  display: inline-block;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-weight: bold;
   letter-spacing: 2px;
   text-decoration: none;
@@ -193,7 +211,8 @@ body .btn--primary:active {
 body .btn--secondary {
   color: #FFF6F1;
   background-color: #091915;
-  padding: 8px 36px;
+  padding: 8px 40px;
+  height: 64px;
   border: 2px solid #FFF6F1;
   -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
@@ -1411,80 +1430,80 @@ body .btn--secondary:active {
     clip-path: none;
   }
   .project__gallery--estojo img:nth-child(1) {
-    top: 200px;
+    top: 300px;
     left: 0%;
-    max-width: 1200px;
+    max-width: 600px;
     height: 250px;
     width: auto;
   }
   .project__gallery--estojo img:nth-child(2) {
-    top: 400px;
-    left: 5%;
-    max-width: 900px;
-    height: 300px;
+    top: 500px;
+    left: 10%;
+    max-width: 600px;
+    height: 350px;
     width: auto;
   }
   .project__gallery--estojo img:nth-child(3) {
-    top: 250px;
-    right: 0%;
-    max-width: 900px;
-    height: 300px;
+    top: 150px;
+    right: 8%;
+    max-width: 600px;
+    height: 320px;
     width: auto;
   }
   .project__gallery--estojo img:nth-child(4) {
-    top: 650px;
-    right: 10%;
-    max-width: 800px;
+    top: 400px;
+    right: 0%;
+    max-width: 600px;
     height: 250px;
     width: auto;
   }
   .project__gallery--rather img:nth-child(1) {
-    top: 200px;
+    top: 350px;
     left: 0%;
-    max-width: 1200px;
-    height: 250px;
+    max-width: 600px;
+    height: 260px;
     width: auto;
   }
   .project__gallery--rather img:nth-child(2) {
-    top: 400px;
+    top: 550px;
     left: 5%;
-    max-width: 900px;
+    max-width: 600px;
     height: 300px;
     width: auto;
   }
   .project__gallery--rather img:nth-child(3) {
-    top: 250px;
+    top: 100px;
     right: 0%;
-    max-width: 900px;
-    height: 300px;
+    max-width: 600px;
+    height: 360px;
     width: auto;
   }
   .project__gallery--memories img:nth-child(1) {
-    top: 200px;
-    left: 0%;
-    max-width: 1200px;
-    height: 250px;
+    top: 100px;
+    left: 15%;
+    max-width: 600px;
+    height: 210px;
     width: auto;
   }
   .project__gallery--memories img:nth-child(2) {
-    top: 400px;
+    top: 250px;
     left: 5%;
-    max-width: 900px;
-    height: 300px;
+    max-width: 600px;
+    height: 250px;
     width: auto;
   }
   .project__gallery--memories img:nth-child(3) {
-    top: 250px;
-    right: 0%;
-    max-width: 900px;
-    height: 300px;
+    top: 400px;
+    left: 0%;
+    max-width: 600px;
+    height: 280px;
     width: auto;
   }
   .project__gallery--memories img:nth-child(4) {
-    top: 650px;
-    right: 10%;
-    max-width: 800px;
-    height: 250px;
+    top: 300px;
+    right: 5%;
+    max-width: 600px;
+    height: 600px;
     width: auto;
   }
 }

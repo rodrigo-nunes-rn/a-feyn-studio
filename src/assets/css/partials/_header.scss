@@ -6,8 +6,17 @@ header {
     padding: 8px 24px;
     position: sticky;
     top: 0;
-    background-color: $background-color;
-    z-index: 10;
+    background: transparent; // Remove background here
+    z-index: 1000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: rgba($background-color, 0.4); // Or use rgba(255,255,255,0.8)
+        backdrop-filter: blur(9px); // Adjust blur as needed
+    }
 
     img {
         width: 40px;

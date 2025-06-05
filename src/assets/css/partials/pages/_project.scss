@@ -163,33 +163,33 @@
     &--estojo {
       
       img:nth-child(1) {
-        top: 200px;
+        top: 300px;
         left: 0%;
-        max-width: 1200px;
+        max-width: 600px;
         height: 250px; 
         width: auto; 
       }
 
       img:nth-child(2) {
-        top: 400px;
-        left: 5%;
-        max-width: 900px;
-        height: 300px; 
+        top: 500px;
+        left: 10%;
+        max-width: 600px;
+        height: 350px; 
         width: auto; 
       }
 
       img:nth-child(3) {
-        top: 250px;
-        right: 0%;
-        max-width: 900px;
-        height: 300px;  
+        top: 150px;
+        right: 8%;
+        max-width: 600px;
+        height: 320px;  
         width: auto;  
       }
 
       img:nth-child(4) {
-        top: 650px;
-        right: 10%;
-        max-width: 800px; 
+        top: 400px;
+        right: 0%;
+        max-width: 600px;
         height: 250px;  
         width: auto;  
       }
@@ -199,26 +199,26 @@
     &--rather {
       
       img:nth-child(1) {
-        top: 200px;
+        top: 350px;
         left: 0%;
-        max-width: 1200px;
-        height: 250px; 
+        max-width: 600px;
+        height: 260px; 
         width: auto; 
       }
 
       img:nth-child(2) {
-        top: 400px;
+        top: 550px;
         left: 5%;
-        max-width: 900px;
+        max-width: 600px;
         height: 300px; 
         width: auto; 
       }
 
       img:nth-child(3) {
-        top: 250px;
+        top: 100px;
         right: 0%;
-        max-width: 900px;
-        height: 300px;  
+        max-width: 600px;
+        height: 360px;  
         width: auto;  
       }
     }
@@ -227,34 +227,34 @@
     &--memories {
       
       img:nth-child(1) {
-        top: 200px;
-        left: 0%;
-        max-width: 1200px;
-        height: 250px; 
+        top: 100px;
+        left: 15%;
+        max-width: 600px;
+        height: 210px; 
         width: auto; 
       }
 
       img:nth-child(2) {
-        top: 400px;
+        top: 250px;
         left: 5%;
-        max-width: 900px;
-        height: 300px; 
+        max-width: 600px;
+        height: 250px; 
         width: auto; 
       }
-
+ 
       img:nth-child(3) {
-        top: 250px;
-        right: 0%;
-        max-width: 900px;
-        height: 300px;  
+        top: 400px;
+        left: 0%;
+        max-width: 600px;
+        height: 280px; 
         width: auto;  
       }
 
       img:nth-child(4) {
-        top: 650px;
-        right: 10%;
-        max-width: 800px; 
-        height: 250px;  
+        top: 300px;
+        right: 5%;
+        max-width: 600px;
+        height: 600px;  
         width: auto;  
       }
     }
