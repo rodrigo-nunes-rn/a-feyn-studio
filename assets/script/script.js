@@ -31,13 +31,12 @@ function dvdBounce(el, zIndexBase = 10) {
 
     let x = areaLeft + Math.random() * (areaWidth - el.offsetWidth);
     let y = Math.random() * (areaHeight - el.offsetHeight);
-    let dx = (0.7 + Math.random() * 2); // Slower speed
-    let dy = (0.7 + Math.random() * 2); // Slower speed
+    let dx = (0.7 + Math.random() * 2); 
+    let dy = (0.7 + Math.random() * 2); 
     let animationFrameId = null;
     let paused = false;
 
     function move() {
-        // Update area on each frame in case of resize
         ({ areaWidth, areaLeft, areaHeight } = getArea());
 
         if (!isLargeScreen()) {
@@ -101,8 +100,6 @@ function dvdBounce(el, zIndexBase = 10) {
         img.addEventListener('mouseenter', () => {
             if (name) name.style.opacity = '1';
             if (desc) desc.style.opacity = '1';
-            // Bring this element to front
-            // Find the highest z-index among all .who__person-* elements
             const allPersons = document.querySelectorAll('[class^="who__person"]');
             let maxZ = zIndexBase;
             allPersons.forEach(person => {
@@ -110,18 +107,15 @@ function dvdBounce(el, zIndexBase = 10) {
                 if (z > maxZ) maxZ = z;
             });
             el.style.zIndex = maxZ + 1;
-            stop(); // Pause animation when hovering image
+            stop();
         });
         img.addEventListener('mouseleave', (e) => {
-            // Do not hide name/desc here
-            // Do not start animation here; wait for container mouseleave
         });
     }
 
     // Resume animation and hide info only when mouse leaves the container
     el.addEventListener('mouseleave', () => {
         start();
-        // Reset z-index to base (lowest among all)
         el.style.zIndex = zIndexBase;
         if (name) name.style.opacity = '';
         if (desc) desc.style.opacity = '';
@@ -149,29 +143,29 @@ window.addEventListener('resize', startDVDAnimations);
 function initializeImagePopup() {
     const galleryImages = document.querySelectorAll('.project__gallery img');
     const popup = document.querySelector('.image-popup');
-    if (!popup) return; // Exit if popup element is not found
+    if (!popup) return; 
 
     const popupImage = popup.querySelector('.image-popup__image');
     const popupOverlay = popup.querySelector('.image-popup__overlay');
     const popupClose = popup.querySelector('.image-popup__close');
 
-    if (!popupImage || !popupOverlay || !popupClose) return; // Exit if any child is missing
+    if (!popupImage || !popupOverlay || !popupClose) return; 
 
     // Open popup on image click
     galleryImages.forEach(image => {
         image.addEventListener('click', () => {
-            popup.style.display = 'flex'; // Show the popup
-            popupImage.src = image.src; // Set the image source
+            popup.style.display = 'flex'; 
+            popupImage.src = image.src; 
         });
     });
 
     // Close popup on overlay or close button click
     popupOverlay.addEventListener('click', () => {
-        popup.style.display = 'none'; // Hide the popup
+        popup.style.display = 'none'; 
     });
 
     popupClose.addEventListener('click', () => {
-        popup.style.display = 'none'; // Hide the popup
+        popup.style.display = 'none'; 
     });
 }
 
